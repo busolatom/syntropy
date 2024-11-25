@@ -1,6 +1,6 @@
 // Function to fetch data from Google Sheets through backend
 function fetchContent() {
-    fetch('/api/server')  // Make a request to backend API
+    fetch('https://syntropy.vercel.app/api/server')  // Make a request to backend API
         .then(response => response.json())
         .then(data => {
             const rows = data.data;
