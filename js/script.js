@@ -1,6 +1,6 @@
-const API_KEY = 'AIzaSyCGNF5zBPVkoSY9N56r6LDpuLxl-dpVvMI'; // Replace with your Google API key
-const SPREADSHEET_ID = '1CI5VtqIo6QXQl7eisFrv1FkqOCd6o9yG9UpoW4MtTdM'; // Replace with your Google Sheets ID
-const range = 'Sheet1!A2:D5'; // Update the range based on your sheet
+const API_KEY = process.env.GOOGLE_API_KEY; 
+const SPREADSHEET_ID = process.env.SHEET_ID; 
+const range = 'Sheet1!A2:D5';
 
 // Function to fetch data from Google Sheets
 function fetchContent() {
