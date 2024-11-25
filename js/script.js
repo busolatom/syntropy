@@ -1,13 +1,9 @@
-const API_KEY = process.env.GOOGLE_API_KEY; 
-const SPREADSHEET_ID = process.env.SHEET_ID; 
-const range = 'Sheet1!A2:D5';
-
-// Function to fetch data from Google Sheets
+// Function to fetch data from Google Sheets through backend
 function fetchContent() {
-    fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${range}?key=${API_KEY}`)
+    fetch('/api/getData')  // Make a request to backend API
         .then(response => response.json())
         .then(data => {
-            const rows = data.values;
+            const rows = data.data;
             // Loop through each row and populate the content
             rows.forEach(row => {
                 const pageName = row[0];
@@ -17,8 +13,8 @@ function fetchContent() {
 
                 if (pageName === 'Home') {
                     document.getElementById('homepage-title').innerText = content;
-                    document.getElementById('homepage-description').innerText = row[2]; // Description
-                    document.getElementById('homepage-image').src = row[3];
+                    document.getElementById('homepage-description').innerText = description; // Description
+                    document.getElementById('homepage-image').src = imageURL;
                 } else if (pageName === 'About Us') {
                     document.getElementById('about-content').innerText = content;
                 } else if (pageName === 'Services') {
