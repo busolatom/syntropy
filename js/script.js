@@ -48,3 +48,12 @@ function populatePage(pagePrefix, content, description, imageURL) {
 // Fetch the content when the page loads
 document.addEventListener('DOMContentLoaded', fetchContent);
 
+// Changes nav bar to white and nav link items to black on scroll
+window.addEventListener('scroll', function() {
+    var navbar = document.getElementById('navbar');
+    if (window.scrollY > 0) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });

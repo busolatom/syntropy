@@ -1,124 +1,215 @@
-/* Reset default margins and paddings */
+/* Global reset and base styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* General body styling */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 20px;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Header styling */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #ff9800;
-}
-
-/* Section shared styling */
-section {
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-}
-
-/* Home Section */
-#home {
-    text-align: center;
-    background-color: #e9ecef;
-}
-
-#homepage-title {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-#homepage-description {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: #555;
-}
-
-#homepage-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* About Us Section */
-#about h2,
-#services h2,
-#contact h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-#about-content,
-#services-content,
-#contact-content {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #555;
-}
-
-#about-description,
-#services-description,
-#contact-description {
-    font-size: 1rem;
-    color: #777;
-    margin: 10px 0;
-}
-
-#about img,
-#services img,
-#contact img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Footer styling */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    margin-top: 20px;
-}
-
-footer p {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    overflow-x: hidden;
     margin: 0;
+    padding: 0;
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.courgette-regular {
+    font-family: "Courgette", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#logo {
+    width: 200px;
+    max-height: fit-content;
+}
+
+.fixed-navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+    background-color: transparent; /* Default transparent background */
+}
+
+.fixed-navbar.scrolled {
+    background-color: rgba(255, 255, 255, 1.0);
+}
+
+.fixed-navbar.scrolled a {
+    color: black;
+}
+
+#nav-links {
+    display: flex;
+    column-gap: 40px;
+}
+
+#nav-links a:hover {
+    color: red;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+#hero {
+    background-image: url(../assets/welder-5408909_1280.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+#hero-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    z-index: 99;
+}
+
+header {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+#subtext1 {
+    font-size: 40px;
+}
+
+#subtext2 {
+    font-size: 70px;
+}
+
+.get-button {
+    background-color: #B35066;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.get-button:hover {
+    color: white;
+    background-color: black;
+}
+
+/* Mobile responsiveness - for screens smaller than 768px */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    #logo {
+        width: 150px;  /* Reducing logo size */
+    }
+
+    .fixed-navbar {
+        padding: 10px 20px;
+    }
+
+    #nav-links {
+        flex-direction: column;
+        row-gap: 15px;
+        align-items: center;
+        justify-content: center; /* Center the links vertically */
+    }
+
+    a {
+        font-size: 16px; /* Adjusting font size for mobile */
+    }
+
+    #hero {
+        height: 60vh; /* Reducing hero section height */
+    }
+
+    #hero-overlay {
+        padding: 10px;
+        row-gap: 15px; /* Adjusting spacing for smaller screens */
+    }
+
+    #subtext1 {
+        font-size: 30px;
+    }
+
+    #subtext2 {
+        font-size: 50px;
+    }
+
+    .get-button {
+        font-size: 18px;
+        padding: 10px 25px;
+    }
+}
+
+/* Extra small screens - for screens smaller than 480px */
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+
+    #logo {
+        width: 130px; /* Further reducing logo size */
+    }
+
+    .fixed-navbar {
+        padding: 10px 15px;
+    }
+
+    #nav-links {
+        flex-direction: column;
+        row-gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    a {
+        font-size: 14px; /* Smaller font for extra small screens */
+    }
+
+    #hero {
+        height: 50vh; /* Further reducing hero height */
+    }
+
+    #hero-overlay {
+        padding: 15px;
+    }
+
+    #subtext1 {
+        font-size: 24px;
+    }
+
+    #subtext2 {
+        font-size: 35px;
+    }
+
+    .get-button {
+        font-size: 16px;
+        padding: 8px 20px;
+    }
 }

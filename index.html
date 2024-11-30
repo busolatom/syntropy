@@ -4,20 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Syntropy Website</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat&family=Poppins:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/swiper.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
+        <nav id="navbar" class="fixed-navbar">
+            <img src="./assets/synlogo.png" alt="logo" id="logo" height="100">
+            <div id="nav-links">
+                <span><a href="#home">Home</a></span>
+                <span><a href="#about">About Us</a></span>
+                <span><a href="#services">Services</a></span>
+                <span><a href="#testimonials">Testimonials</a></span>
+                <span><a href="#contact">Contact Us</a></span>
+            </div>
         </nav>
-    </header>
-
+        <section id="hero">
+            <div id="hero-overlay">
+                <header>
+                    <span id="subtext2" class="poppins-bold">WELCOME</span>
+                    <span id="subtext1" class="courgette-regular">Curabitur vivamus sagittis venenatis scelerisque integer proin fermentum.</span>
+                </header>
+                <button class="get-button">Get In Touch</button>
+            </div>
+        </section>
     <section id="home">
         <h1 id="homepage-title">Loading...</h1>
         <p id="homepage-description">Loading...</p>
