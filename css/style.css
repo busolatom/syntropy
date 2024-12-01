@@ -61,7 +61,8 @@ body {
 }
 
 #nav-links a:hover {
-    color: red;
+    color: #AC4159;
+    font-weight: bold;
 }
 
 a {
@@ -70,7 +71,7 @@ a {
     font-size: 14px;
 }
 
-#hero {
+#home {
     background-image: url(../assets/welder-5408909_1280.jpg);
     background-size: cover;
     width: 100vw;
@@ -119,6 +120,238 @@ header {
     background-color: black;
 }
 
+#aboutimage {
+    width: 500px;
+    height: 367px;
+    transition: transform 0.6s ease;
+}
+
+#aboutimage:hover {
+    transform: scale(1.1);
+}
+
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px;
+    background-color: #EFEFEF;
+    width: 100vw;
+    column-gap: 150px;
+}
+
+.sub-header {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.sub-header span:nth-child(1) {
+    color: #AC4159;
+    font-size: 50px;
+}
+
+.sub-header span:nth-child(2) {
+    color: #222222;
+    font-size: 40px;
+}
+
+#aboutdescription {
+    color: black;
+    font-size: 18px;
+    margin: 0px 0px 22px;
+    max-width: 513px;
+    text-align: left;
+    padding: 0px;
+    line-height: 22.5px;
+}
+
+#services {
+    background-color: white;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 20px;
+    z-index: 20;
+}
+
+#blogcards {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three cards per row */
+    gap: 80px; /* Space between cards */
+    justify-items: center; /* Center cards horizontally */
+}
+
+.cardhome {
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.cardimg {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    transition: transform 0.6s ease;
+}
+
+.cardimg:hover {
+    transform: scale(1.1);
+}
+
+.cardtext {
+    color: #042242;
+    font-size: 14px;
+}
+
+.phead {
+    color: black;
+    letter-spacing: 1px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.phead:hover {
+    color: #AC4159;
+}
+
+#testimonials {
+    width: 100vw;
+    background-color: #F5F6FA;
+}
+
+.swiper {
+    width: 100%;
+    height: 500px;
+}
+
+.swiper-slide {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+}
+
+.swiper-slide h1 {
+    color: #AC4159;
+    font-size: 40px;
+}
+
+.images-one {
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+    max-width: 65%;
+    height: 120px;
+    margin: 0 auto;
+}
+
+.review-text {
+    color: rgb(38, 50, 70);
+    font-family: "DM Sans", sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    text-align: center;
+    align-items: center;
+    max-width: 65%;
+    margin: 0 auto;
+}
+
+.magin-para {
+    color: rgb(38, 50, 70);
+    font-family: "DM Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: #001F3F !important;
+    font-weight: bold;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    color: #AC4159 !important;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+    color: #001F3F !important;
+    font-weight: bold;
+}
+
+.swiper-button-next:hover::after, .swiper-button-prev:hover::after {
+    color: #AC4159 !important;
+}
+
+.swiper-pagination-bullet {
+    background-color: #001F3F !important;
+    opacity: 0.8;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #AC4159 !important;
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #001F3F;
+    color: #fff;
+    padding: 20px;
+}
+
+#contact span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+    flex-wrap: wrap;
+}
+
+#contact i {
+    font-size: 20px;
+    color: #AC4159;
+    vertical-align: middle;
+}
+
+#contact p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #001F3F;
+    color: #fff;
+}
+
+#social-icons a {
+    margin-left: 20px;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+#social-icons a:hover {
+    transform: rotateY(180deg);
+}
+
 /* Mobile responsiveness - for screens smaller than 768px */
 @media (max-width: 768px) {
     body {
@@ -126,7 +359,7 @@ header {
     }
 
     #logo {
-        width: 150px;  /* Reducing logo size */
+        width: 150px; /* Reducing logo size */
     }
 
     .fixed-navbar {
@@ -144,72 +377,57 @@ header {
         font-size: 16px; /* Adjusting font size for mobile */
     }
 
-    #hero {
+    #home {
         height: 60vh; /* Reducing hero section height */
     }
 
     #hero-overlay {
         padding: 10px;
-        row-gap: 15px; /* Adjusting spacing for smaller screens */
     }
 
-    #subtext1 {
+    #about {
+        flex-direction: column;
+        row-gap: 40px;
+        padding: 40px 20px;
+    }
+
+    #aboutdescription {
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    #services {
+        padding: 60px 20px;
+    }
+
+    #blogcards {
+        grid-template-columns: 1fr 1fr; /* 2 cards per row */
+        gap: 40px; /* Adjusting space between cards */
+    }
+
+    .cardhome {
+        width: 80%;
+    }
+
+    #testimonials {
+        padding: 40px 20px;
+    }
+
+    .swiper-slide h1 {
         font-size: 30px;
     }
 
-    #subtext2 {
-        font-size: 50px;
-    }
-
-    .get-button {
-        font-size: 18px;
-        padding: 10px 25px;
-    }
-}
-
-/* Extra small screens - for screens smaller than 480px */
-@media (max-width: 480px) {
-    body {
-        font-size: 16px;
-    }
-
-    #logo {
-        width: 130px; /* Further reducing logo size */
-    }
-
-    .fixed-navbar {
-        padding: 10px 15px;
-    }
-
-    #nav-links {
-        flex-direction: column;
-        row-gap: 10px;
-        align-items: center;
-        justify-content: center;
-    }
-
-    a {
-        font-size: 14px; /* Smaller font for extra small screens */
-    }
-
-    #hero {
-        height: 50vh; /* Further reducing hero height */
-    }
-
-    #hero-overlay {
-        padding: 15px;
-    }
-
-    #subtext1 {
+    .review-text {
         font-size: 24px;
     }
 
-    #subtext2 {
-        font-size: 35px;
+    .magin-para {
+        font-size: 18px;
     }
 
-    .get-button {
-        font-size: 16px;
-        padding: 8px 20px;
+    footer {
+        padding: 10px;
     }
 }
