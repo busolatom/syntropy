@@ -98,7 +98,7 @@ header {
 }
 
 #subtext1 {
-    font-size: 40px;
+    font-size: 50px;
 }
 
 #subtext2 {
@@ -142,7 +142,7 @@ header {
 
 .sub-header {
     display: flex;
-    text-align: center;
+    text-align: left;
     flex-direction: column;
 }
 
@@ -156,7 +156,23 @@ header {
     font-size: 40px;
 }
 
-#aboutdescription {
+.sub-header1 {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.sub-header1 span:nth-child(1) {
+    color: #AC4159;
+    font-size: 50px;
+}
+
+.sub-header1 span:nth-child(2) {
+    color: #222222;
+    font-size: 40px;
+}
+
+.aboutdescription {
     color: black;
     font-size: 18px;
     margin: 0px 0px 22px;
@@ -223,9 +239,79 @@ header {
     color: #AC4159;
 }
 
+#sub-header h1 {
+    color: #AC4159;
+    font-size: 40px;
+}
+#team {
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 50px;
+    /* margin-bottom: 50px; */
+  }
+  #aspects {
+    background-color: #F8F8F8;
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5px;
+    padding-top: 50px;
+  }
+  .aspectdiv {
+    /* padding-top: 50px; */
+    background-color: white;
+    text-align: center;
+    width: 250px;
+    height: 90%;
+    border-radius: 5px;
+    /* margin-left: -5px; */
+  }
+
+  .cardimge {
+    width: 100%;
+    height: 80%;
+    /* border-radius: 10px; */
+    /* transition: transform 0.6s ease; */
+}
+
+.name{
+    color: rgb(38, 50, 70);
+    display: block;
+    font-family: "DM Sans", sans-serif;
+font-size: 20px;
+font-weight: 400;
+height: 24px;
+text-align: center;
+margin-top: 5px;
+}
+.post{
+    color: #AC4159;
+}
+ 
+#sub-header img {
+  width: 150px;
+  margin-bottom: -25px;
+}
+#sub-header {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+#p-one1 {
+  color: rgb(38, 50, 70);
+font-family: "DM Sans", sans-serif;
+font-size: 44px;
+font-weight: 400;
+padding-bottom: 15px;
+}
+
 #testimonials {
     width: 100vw;
     background-color: #F5F6FA;
+    /* height: fit-content; */
 }
 
 .swiper {
@@ -246,7 +332,7 @@ header {
     color: #AC4159;
     font-size: 40px;
 }
-
+/* 
 .images-one {
     display: block;
     object-fit: cover;
@@ -254,7 +340,7 @@ header {
     max-width: 65%;
     height: 120px;
     margin: 0 auto;
-}
+} */
 
 .review-text {
     color: rgb(38, 50, 70);
@@ -352,10 +438,115 @@ footer {
     transform: rotateY(180deg);
 }
 
-/* Mobile responsiveness - for screens smaller than 768px */
+/* Responsive Design */
+
+/* Mobile responsiveness  */
+@media (max-width: 576px) {
+    body {
+        font-size: 12px;
+    }
+
+    #logo {
+        width: 150px; /* Reducing logo size */
+    }
+
+    .fixed-navbar {
+        padding: 10px 20px;
+    }
+    #navbar {
+        flex-direction: column;
+        align-items: center;
+      }
+    #nav-links span a {
+        margin-right: 10px;
+        font-size: 12px;
+      }
+
+    a {
+        font-size: 12px; /* Adjusting font size for mobile */
+    }
+
+    #home {
+        height: 60vh; /* Reducing hero section height */
+    }
+
+    #hero-overlay {
+        padding: 10px;
+    }
+
+    #about {
+        flex-direction: column;
+        row-gap: 40px;
+        padding: 40px 20px;
+    }
+
+    #aboutdescription {
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    #services {
+        padding: 60px 20px;
+    }
+
+    #blogcards {
+        grid-template-columns: 1fr 1fr; /* 2 cards per row */
+        gap: 30px; /* Adjusting space between cards */
+    }
+
+    .cardhome {
+        width: 80%;
+    }
+
+    #testimonials {
+        padding: 40px 20px;
+    }
+
+    .swiper {
+        height: 300px;
+    }
+
+    .swiper-slide h1 {
+        font-size: 30px;
+    }
+
+    .review-text {
+        font-size: 18px;
+        max-width: 90%
+    }
+
+    .magin-para {
+        font-size: 18px;
+    }
+    #contact {
+        padding: 10px; /* Reduces padding for smaller screens */
+      /* Adjusts bottom margin */
+      }
+      #contact span {
+        flex-direction: column; /* Stacks items vertically on mobile */
+        gap: 10px; /* Reduces gap between items */
+        text-align: center; /* Centers text */
+      }
+    
+      #contact i {
+        font-size: 18px; /* Smaller icons on mobile */
+        margin-right: 5px; /* Reduces margin between icons and text */
+      }
+    
+      #contact p {
+        font-size: 16px; /* Smaller text size on mobile */
+      }
+    footer {
+        padding: 10px;
+    }
+}
+
+/* Medium devices (tablets) */
 @media (max-width: 768px) {
     body {
-        font-size: 14px;
+        overflow-x: hidden;
     }
 
     #logo {
@@ -374,11 +565,11 @@ footer {
     }
 
     a {
-        font-size: 16px; /* Adjusting font size for mobile */
+        font-size: 12px; /* Adjusting font size for mobile */
     }
 
     #home {
-        height: 60vh; /* Reducing hero section height */
+        height: 75vh; /* Reducing hero section height */
     }
 
     #hero-overlay {
@@ -392,7 +583,7 @@ footer {
     }
 
     #aboutdescription {
-        font-size: 16px;
+        font-size: 12px;
         line-height: 20px;
         text-align: center;
         padding: 10px;
@@ -415,19 +606,16 @@ footer {
         padding: 40px 20px;
     }
 
+    .swiper{
+        height: 400px;
+    }
+
     .swiper-slide h1 {
         font-size: 30px;
     }
 
     .review-text {
-        font-size: 24px;
-    }
-
-    .magin-para {
-        font-size: 18px;
-    }
-
-    footer {
-        padding: 10px;
+        font-size: 20px;
+        max-width: 80%
     }
 }
