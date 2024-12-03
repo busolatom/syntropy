@@ -76,6 +76,7 @@ a {
     background-size: cover;
     width: 100vw;
     height: 100vh;
+    background-position: center center;
 }
 
 #hero-overlay {
@@ -119,6 +120,65 @@ header {
     color: white;
     background-color: black;
 }
+
+/* Hamburger Menu styles */
+#hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 110;
+  }
+  
+  #hamburger-menu .bar {
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    border-radius: 5px;
+  }
+  
+  /* Show the hamburger menu on mobile */
+  @media (max-width: 768px) {
+    #nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      padding: 20px;
+      position: absolute;
+      top: 60px; /* Below the navbar */
+      left: 0;
+      background-color: #fff;
+      z-index: 100;
+    }
+  
+    #nav-links a {
+      padding: 10px 0;
+      font-size: 18px;
+      color: #333;
+      text-transform: uppercase;
+      border-bottom: 1px solid #ddd;
+    }
+  
+    #nav-links a:hover {
+      color: #AC4159;
+    }
+  
+    #hamburger-menu {
+      display: flex;
+    }
+    
+    .fixed-navbar.scrolled #hamburger-menu .bar {
+      background-color: #333;
+    }
+  }
+  
+  /* Active state for navigation menu */
+  #nav-links.active {
+    display: flex;
+  }
 
 #aboutimage {
     width: 500px;
@@ -248,7 +308,6 @@ header {
     width: 100vw;
     height: 100vh;
     padding-top: 50px;
-    /* margin-bottom: 50px; */
   }
   #aspects {
     background-color: #F8F8F8;
@@ -261,31 +320,27 @@ header {
     padding-top: 50px;
   }
   .aspectdiv {
-    /* padding-top: 50px; */
     background-color: white;
     text-align: center;
     width: 250px;
     height: 90%;
     border-radius: 5px;
-    /* margin-left: -5px; */
   }
 
   .cardimge {
     width: 100%;
     height: 80%;
-    /* border-radius: 10px; */
-    /* transition: transform 0.6s ease; */
-}
+  }
 
 .name{
     color: rgb(38, 50, 70);
     display: block;
     font-family: "DM Sans", sans-serif;
-font-size: 20px;
-font-weight: 400;
-height: 24px;
-text-align: center;
-margin-top: 5px;
+    font-size: 20px;
+    font-weight: 400;
+    height: 24px;
+    text-align: center;
+    margin-top: 5px;
 }
 .post{
     color: #AC4159;
@@ -302,16 +357,15 @@ margin-top: 5px;
 }
 #p-one1 {
   color: rgb(38, 50, 70);
-font-family: "DM Sans", sans-serif;
-font-size: 44px;
-font-weight: 400;
-padding-bottom: 15px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 44px;
+  font-weight: 400;
+  padding-bottom: 15px;
 }
 
 #testimonials {
     width: 100vw;
     background-color: #F5F6FA;
-    /* height: fit-content; */
 }
 
 .swiper {
@@ -332,15 +386,6 @@ padding-bottom: 15px;
     color: #AC4159;
     font-size: 40px;
 }
-/* 
-.images-one {
-    display: block;
-    object-fit: cover;
-    border-radius: 50%;
-    max-width: 65%;
-    height: 120px;
-    margin: 0 auto;
-} */
 
 .review-text {
     color: rgb(38, 50, 70);
@@ -386,6 +431,7 @@ padding-bottom: 15px;
 .swiper-pagination-bullet-active {
     background-color: #AC4159 !important;
 }
+
 
 #contact {
     display: flex;
@@ -438,87 +484,206 @@ footer {
     transform: rotateY(180deg);
 }
 
-/* Responsive Design */
-
-/* Mobile responsiveness  */
-@media (max-width: 576px) {
-    body {
-        font-size: 12px;
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    body{
+        overflow-x: hidden;
     }
-
-    #logo {
-        width: 150px; /* Reducing logo size */
-    }
-
     .fixed-navbar {
-        padding: 10px 20px;
+        padding: 10px 30px;
     }
-    #navbar {
-        flex-direction: column;
-        align-items: center;
-      }
-    #nav-links span a {
-        margin-right: 10px;
-        font-size: 12px;
-      }
-
-    a {
-        font-size: 12px; /* Adjusting font size for mobile */
+    #subtext1 {
+        font-size: 40px; /* Slightly smaller text size on tablets */
     }
 
-    #home {
-        height: 60vh; /* Reducing hero section height */
+    #subtext2 {
+        font-size: 60px; /* Adjust text size for tablets */
     }
 
-    #hero-overlay {
-        padding: 10px;
+    .get-button {
+        font-size: 18px; /* Slightly smaller font size for buttons */
+        padding: 8px 16px; /* Adjust padding for tablets */
+    }
+    #nav-links {
+        column-gap: 20px;
+    }
+   
+    #home #hero-overlay {
+        padding: 20px;
     }
 
-    #about {
-        flex-direction: column;
-        row-gap: 40px;
-        padding: 40px 20px;
+    .sub-header span:nth-child(1), .sub-header span:nth-child(2) {
+        font-size: 30px;
     }
 
-    #aboutdescription {
-        font-size: 12px;
+    .aboutdescription {
+        font-size: 16px;
         line-height: 20px;
-        text-align: center;
-        padding: 10px;
-    }
-
-    #services {
-        padding: 60px 20px;
-    }
-
-    #blogcards {
-        grid-template-columns: 1fr 1fr; /* 2 cards per row */
-        gap: 30px; /* Adjusting space between cards */
     }
 
     .cardhome {
         width: 80%;
     }
 
-    #testimonials {
-        padding: 40px 20px;
+    #blogcards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    #services {
+        padding: 50px 20px;
     }
 
     .swiper {
-        height: 300px;
+        height: 400px; /* Adjust height for tablets */
     }
 
     .swiper-slide h1 {
-        font-size: 30px;
+        font-size: 30px; /* Smaller text size on tablets */
     }
 
     .review-text {
-        font-size: 18px;
-        max-width: 90%
+        font-size: 28px; /* Adjust font size for better readability */
+        max-width: 80%; /* Increase max-width for tablets */
     }
 
     .magin-para {
-        font-size: 18px;
+        font-size: 18px; /* Slightly smaller font size */
+    }
+    #team {
+        height: auto; /* Adjust the height on smaller screens */
+    }
+
+    #aspects {
+        height: auto; /* Adjust the height for better flexibility */
+        flex-direction: row; /* Stack items vertically on smaller screens */
+        gap: 20px; /* Increase gap for better spacing */
+    }
+
+    .aspectdiv {
+        width: 80%; /* Make each aspect div occupy 80% of the width */
+        height: auto; /* Adjust height to content */
+        padding: 20px; /* Add some padding for mobile screens */
+    }
+
+    .name {
+        font-size: 18px; /* Slightly smaller text size for mobile */
+    }
+
+    .cardimge {
+        height: auto; /* Adjust height to fit better on mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    .fixed-navbar {
+        padding: 10px 20px;
+    }
+
+    /* #nav-links {
+        display: none;
+    } */
+    #home {
+        background-position: center center; /* Center the background on mobile */
+        height: 80vh; /* Adjust height for mobile to avoid excessive scrolling */
+    }
+
+    .fixed-navbar.scrolled {
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    .fixed-navbar.scrolled a {
+        color: black;
+    }
+    #subtext1 {
+        font-size: 30px; /* Smaller font size on mobile */
+    }
+
+    #subtext2 {
+        font-size: 50px; /* Smaller font size on mobile */
+    }
+
+    .get-button {
+        font-size: 16px; /* Adjust button font size for mobile */
+        padding: 6px 12px; /* Adjust padding for mobile */
+    }
+
+    #hero-overlay {
+        height: 100vh; /* Keep overlay full-height on mobile */
+        padding: 0 10px; /* Add padding to prevent text from hitting edges */
+    }
+    .cardhome {
+        width: 100%;
+    }
+
+    #about {
+        flex-direction: column;
+        align-items: center;
+        padding: 50px;
+    }
+
+    #aboutimage {
+        width: 100%;
+        height: auto;
+        max-width: 500px; /* Prevents image from becoming too large */
+        /* transition: transform 0.6s ease; */
+        padding-bottom: 5px;
+    }
+    #services {
+        padding: 30px 10px;
+    }
+
+    #blogcards {
+        grid-template-columns: 1fr;
+    }
+
+    .swiper {
+        height: 350px; /* Adjust height for mobile devices */
+    }
+
+    .swiper-slide h1 {
+        font-size: 24px; /* Smaller font size for mobile */
+    }
+
+    .review-text {
+        font-size: 22px; /* Adjust text size for mobile */
+        max-width: 90%; /* Increase width to accommodate on small screens */
+    }
+
+    .magin-para {
+        font-size: 16px; /* Adjust font size for mobile */
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        font-size: 18px; /* Smaller button sizes on mobile */
+    }
+    #team {
+        height: auto; /* Ensure the team section adapts to mobile screens */
+        padding-top: 30px; /* Reduce padding for smaller screens */
+    }
+
+    #aspects {
+        height: auto;
+        padding-top: 30px; /* Adjust padding on mobile */
+        flex-direction: column; /* Stack elements vertically */
+        gap: 20px; /* Adjust spacing */
+    }
+
+    .aspectdiv {
+        width: 100%; /* Each aspect div takes up full width */
+        height: auto;
+        padding: 15px; /* Adjust padding on mobile */
+    }
+
+    .name {
+        font-size: 16px; /* Further reduce text size on smaller devices */
+    }
+
+    .cardimge {
+        height: auto; /* Ensure images scale properly */
     }
     #contact {
         padding: 10px; /* Reduces padding for smaller screens */
@@ -541,81 +706,5 @@ footer {
     footer {
         padding: 10px;
     }
-}
-
-/* Medium devices (tablets) */
-@media (max-width: 768px) {
-    body {
-        overflow-x: hidden;
-    }
-
-    #logo {
-        width: 150px; /* Reducing logo size */
-    }
-
-    .fixed-navbar {
-        padding: 10px 20px;
-    }
-
-    #nav-links {
-        flex-direction: column;
-        row-gap: 15px;
-        align-items: center;
-        justify-content: center; /* Center the links vertically */
-    }
-
-    a {
-        font-size: 12px; /* Adjusting font size for mobile */
-    }
-
-    #home {
-        height: 75vh; /* Reducing hero section height */
-    }
-
-    #hero-overlay {
-        padding: 10px;
-    }
-
-    #about {
-        flex-direction: column;
-        row-gap: 40px;
-        padding: 40px 20px;
-    }
-
-    #aboutdescription {
-        font-size: 12px;
-        line-height: 20px;
-        text-align: center;
-        padding: 10px;
-    }
-
-    #services {
-        padding: 60px 20px;
-    }
-
-    #blogcards {
-        grid-template-columns: 1fr 1fr; /* 2 cards per row */
-        gap: 40px; /* Adjusting space between cards */
-    }
-
-    .cardhome {
-        width: 80%;
-    }
-
-    #testimonials {
-        padding: 40px 20px;
-    }
-
-    .swiper{
-        height: 400px;
-    }
-
-    .swiper-slide h1 {
-        font-size: 30px;
-    }
-
-    .review-text {
-        font-size: 20px;
-        max-width: 80%
-    }
+   
 }
