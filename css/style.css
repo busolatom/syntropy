@@ -11,8 +11,7 @@ body {
     font-weight: 400;
     font-style: normal;
     font-size: 12px;
-    overflow-x: hidden;
-    margin: 0;
+    overflow-x: hidden;    margin: 0;
     padding: 0;
 }
 
@@ -61,7 +60,7 @@ body {
 }
 
 #nav-links a:hover {
-    color: #AC4159;
+    color: #FE5D37;
     font-weight: bold;
 }
 
@@ -107,7 +106,7 @@ header {
 }
 
 .get-button {
-    background-color: #B35066;
+    background-color: #FE5D37;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -118,7 +117,7 @@ header {
 
 .get-button:hover {
     color: white;
-    background-color: black;
+    background-color: #0500FC;
 }
 
 /* Hamburger Menu styles */
@@ -163,7 +162,7 @@ header {
     }
   
     #nav-links a:hover {
-      color: #AC4159;
+      color: #FE5D37;
     }
   
     #hamburger-menu {
@@ -207,7 +206,7 @@ header {
 }
 
 .sub-header span:nth-child(1) {
-    color: #AC4159;
+    color: #FE5D37;
     font-size: 50px;
 }
 
@@ -223,7 +222,7 @@ header {
 }
 
 .sub-header1 span:nth-child(1) {
-    color: #AC4159;
+    color: #FE5D37;
     font-size: 50px;
 }
 
@@ -296,11 +295,11 @@ header {
 }
 
 .phead:hover {
-    color: #AC4159;
+    color: #FE5D37;
 }
 
 #sub-header h1 {
-    color: #AC4159;
+    color: #FE5D37;
     font-size: 40px;
 }
 #team {
@@ -343,7 +342,7 @@ header {
     margin-top: 5px;
 }
 .post{
-    color: #AC4159;
+    color: #FE5D37;
 }
  
 #sub-header img {
@@ -383,7 +382,7 @@ header {
 }
 
 .swiper-slide h1 {
-    color: #AC4159;
+    color: #FE5D37;
     font-size: 40px;
 }
 
@@ -406,30 +405,30 @@ header {
 }
 
 .swiper-button-next, .swiper-button-prev {
-    color: #001F3F !important;
+    color: #0500FC !important;
     font-weight: bold;
 }
 
 .swiper-button-next:hover, .swiper-button-prev:hover {
-    color: #AC4159 !important;
+    color: #FE5D37 !important;
 }
 
 .swiper-button-next::after, .swiper-button-prev::after {
-    color: #001F3F !important;
+    color: #0500FC !important;
     font-weight: bold;
 }
 
 .swiper-button-next:hover::after, .swiper-button-prev:hover::after {
-    color: #AC4159 !important;
+    color: #FE5D37 !important;
 }
 
 .swiper-pagination-bullet {
-    background-color: #001F3F !important;
+    background-color: #0500FC !important;
     opacity: 0.8;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #AC4159 !important;
+    background-color: #FE5D37 !important;
 }
 
 
@@ -453,7 +452,7 @@ header {
 
 #contact i {
     font-size: 20px;
-    color: #AC4159;
+    color: #FE5D37;
     vertical-align: middle;
 }
 
